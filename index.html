@@ -17,9 +17,10 @@
 
     <a-assets>
       <a-asset-item id="entorno" src="assets/stalker-blockpost/source/фон 3.glb"></a-asset-item>
-      <a-asset-item id="modelo-3d" src="assets/Zombiee.glb"></a-asset-item>
-      <a-asset-item id="zombieW" src="assets/zombiewalk.glb"></a-asset-item>
-      <a-asset-item id="zombieR" src="assets/zombieR.glb"></a-asset-item>
+      <a-asset-item id="modelo-3d" src="assets/Zombiee.glb"class="zombie"></a-asset-item>
+      <a-asset-item id="zombieW" src="assets/zombiewalk.glb"class="zombie"></a-asset-item>
+      <a-asset-item id="zombieR" src="assets/zombieR.glb"class="zombie"></a-asset-item>
+      <a-asset-item id="warrior" src="assets/warrior.glb"></a-asset-item>
     </a-assets>
 
     <a-scene fog="type: exponential; color: #6EBAA7; density: 0.01"></a-scene>
@@ -27,6 +28,8 @@
     <a-light type=" ambient" color="#555"></a-light>
       <a-light type="directional" color="#FFF" intensity="1" position="-3 10 -10"></a-light>
       <a-entity gltf-model="#entorno" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-entity>
+
+      <a-entity gltf-model="#warrior" detectar-colision></a-entity>
 
   </a-scene>
 </body>
