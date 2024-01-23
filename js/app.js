@@ -10,7 +10,7 @@ window.onload = function() {
       personaje.setAttribute('animation-mixer', '');
 
       let x = Math.random() * 30 - 10; // Ajusta estos valores según tu escena
-      let y = 0; // Asumiendo que están en el suelo
+      let y = 0; 
       let z = Math.random() * 30 - 20;
       personaje.setAttribute('position', `${x} ${y} ${z}`);
 
