@@ -1,16 +1,19 @@
 
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function () {
+  let score = 0
   const scene = document.querySelector('a-scene');
   const numeroDeCopias = 5; // Número de copias de cada modelo
 
   for (let i = 0; i < numeroDeCopias; i++) {
-    ['modelo-3d', 'zombieW', 'zombieR'].forEach(modelo => {
+    ['modelo-3d', 'zombieW', 'zombieR', 'warrior'].forEach(modelo => {
       let personaje = document.createElement('a-entity');
       personaje.setAttribute('gltf-model', `#${modelo}`);
       personaje.setAttribute('animation-mixer', '');
+      personaje.setAttribute('shootable', '');
+
 
       let x = Math.random() * 30 - 10; // Ajusta estos valores según tu escena
-      let y = 0; 
+      let y = 0;
       let z = Math.random() * 30 - 20;
       personaje.setAttribute('position', `${x} ${y} ${z}`);
 
@@ -23,25 +26,25 @@ window.onload = function() {
       scene.appendChild(luz);
     });
   }
-};
 
-AFRAME.registerComponent('detectar-colision', {
-    tick: function () {
-      // Obtén la posición del guerrero o del hacha
-      let position = this.el.object3D.position;
-  
-      // Detecta colisión con cada zombie
-      let zombies = document.querySelectorAll('.zombie');
-      zombies.forEach(zombie => {
-        let zPosition = zombie.object3D.position;
-        let distancia = position.distanceTo(zPosition);
-  
-        // Si la distancia es menor que un umbral, el zombie es 'golpeado'
-        if (distancia < UM_BRAL) {
-          // Elimina el zombie o cambia su estado
-          zombie.parentNode.removeChild(zombie);
+
+
+  AFRAME.registerComponent('shootable', {
+    init: function () {
+      this.el.addEventListener('click', () => {
+        this.el.parentNode.removeChild(this.el);
+        score++;
+        const scoreText = document.querySelector('#score-text');
+        if (scoreText) {
+          scoreText.setAttribute('value', `Zombies: ${score}`);
         }
       });
     }
   });
-  
+});
+
+
+
+
+
+
