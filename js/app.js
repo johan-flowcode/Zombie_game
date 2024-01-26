@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   let score = 0
   const scene = document.querySelector('a-scene');
-  const numeroDeCopias = 5; // Número de copias de cada modelo
+  const numeroDeCopias = 2; // Número de copias de cada modelo
 
   for (let i = 0; i < numeroDeCopias; i++) {
     ['modelo-3d', 'zombieW', 'zombieR', 'warrior'].forEach(modelo => {
@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
       personaje.setAttribute('gltf-model', `#${modelo}`);
       personaje.setAttribute('animation-mixer', '');
       personaje.setAttribute('shootable', '');
+      personaje.classList.add('zombie');
 
 
       let x = Math.random() * 30 - 10; // Ajusta estos valores según tu escena
