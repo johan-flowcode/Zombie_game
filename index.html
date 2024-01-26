@@ -6,21 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zombie_game</title>
   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aframe-physics-system/dist/aframe-physics-system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6/dist/aframe-extras.min.js"></script>
   <script src="js/app.js"></script>
 
 </head>
 
 <body>
-  <a-scene fog="type: exponential; color: #6EBAA7; density: 0.06">
+  <a-scene fog="type: exponential; color: #6EBAA7; density: 0.06,">
 
     <a-assets>
-      <a-asset-item id="entorno" src="assets/stalker-blockpost/source/фон 3.glb"></a-asset-item>
+       <a-asset-item id="entorno" src="assets/stalker-blockpost/source/фон 3.glb"></a-asset-item>
       <a-asset-item id="modelo-3d" src="assets/Zombiee.glb" class="zombie"></a-asset-item>
       <a-asset-item id="zombieW" src="assets/zombiewalk.glb" class="zombie"></a-asset-item>
       <a-asset-item id="zombieR" src="assets/zombieR.glb" class="zombie"></a-asset-item>
-      <a-asset-item id="warrior" src="assets/warrior.glb"class="zombie"></a-asset-item>
+      <a-asset-item id="warrior" src="assets/warrior.glb" class="zombie"></a-asset-item>
+      <a-assets-item id="hongo" src="assets/hongo.png" class="hongo"></a-assets-item>
     </a-assets>
 
     <a-sky color="#6EBAA7"></a-sky>
@@ -29,14 +29,14 @@
 
 
     <!-- Entorno -->
-    <a-entity gltf-model="#entorno" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-entity>
+     <a-entity gltf-model="#entorno" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-entity>
 
     <!--Camara jugador-->
     <a-entity camera look-controls wasd-controls position="0 1.6 0">
 
-      <a-text id="score-text"  value="Zombie:0" color="red" position="0 -0.1 -1" width="1" align="center"></a-text>
-      <a-entity cursor="fuse: true; fuseTimeout: 100" position="0 0 -1" raycaster="objects: .zombie"
-        geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02" material="color: red"></a-entity>
+      <a-text id="score-text" value="Honguitos:0" color="red" position="0 -0.1 -1" width="1" align="center"></a-text>
+      <a-entity cursor="fuse: true; fuseTimeout: 100" raycaster="objects: .clickable" position="0 0 -1"
+        geometry="primitive: ring; radiusInner: 0.05; radiusOuter: 0.06" material="color: red"></a-entity>
     </a-entity>
 
 
