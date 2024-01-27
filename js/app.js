@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ['hongo'].forEach(modelo => {
       let hongos = document.createElement('a-entity');
       hongos.setAttribute('png-model', `#${modelo}`);
-      hongos.setAttribute('geometry', { primitive: 'sphere', radius: Math.random() * 0.2 + 0.2 });
+      hongos.setAttribute('geometry', { primitive: 'sphere', radius: '0.2'});
       hongos.setAttribute('material', { shader: 'flat', src: '#hongo' });
       hongos.setAttribute('animation', 'property: rotation; to: 360 360 0; loop: true; dur: 30000; easing: linear');
       hongos.setAttribute('shootable', '');
