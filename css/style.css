@@ -1,0 +1,46 @@
+
+/* Estilos para el botón */
+#next-level-button {
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #next-level-button:hover {
+    background-color: #66c0f8;
+  }
+  
+  /* Estilos para la tarjeta de mensaje */
+  #fin-juego-mensaje {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(6, 196, 168, 0.81);
+    overflow: auto;
+    z-index: 1000;
+  }
+  
+  
+  .mensaje-visible {
+    display: block;
+    
+  }
+  
+  

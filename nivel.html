@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nivel2zombie</title>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+  <a-scene fog="type: exponential; color: #333333; density: 0.06,">
+    <a-assets>
+      <a-asset-item id="Hospital" src="assets/abandoned_brick_room/scene.gltf"></a-asset-item>
+      <a-asset-item id="cama" src="assets/old_bed(1)/scene.gltf"></a-asset-item>
+      
+    </a-assets>
+
+    <a-sky color="#333333"></a-sky>
+
+    <!--Entorno2-->
+    <a-entity gltf-model="#Hospital" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-entity>
+
+  </a-scene>
+
+</body>
+
+</html>

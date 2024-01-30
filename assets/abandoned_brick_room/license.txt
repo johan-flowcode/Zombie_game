@@ -1,0 +1,11 @@
+Model Information:
+* title:	Abandoned Brick Room
+* source:	https://sketchfab.com/3d-models/abandoned-brick-room-3748552b557149a3b4daef19642f2cfc
+* author:	jimbogies (https://sketchfab.com/jimbogies)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Abandoned Brick Room" (https://sketchfab.com/3d-models/abandoned-brick-room-3748552b557149a3b4daef19642f2cfc) by jimbogies (https://sketchfab.com/jimbogies) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

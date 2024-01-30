@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zombie_game</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6/dist/aframe-extras.min.js"></script>
   <script src="js/app.js"></script>
@@ -15,13 +16,13 @@
   <a-scene fog="type: exponential; color: #6EBAA7; density: 0.06,">
 
     <a-assets>
-       <a-asset-item id="entorno" src="assets/stalker-blockpost/source/фон 3.glb"></a-asset-item>
-      <a-asset-item id="modelo-3d" src="assets/Zombiee.glb" ></a-asset-item>
-      <a-asset-item id="zombieW" src="assets/zombiewalk.glb" ></a-asset-item>
-      <a-asset-item id="zombieR" src="assets/zombieR.glb" ></a-asset-item>
-      <a-asset-item id="warrior" src="assets/warrior.glb" ></a-asset-item>
+      <a-asset-item id="entorno" src="assets/stalker-blockpost/source/фон 3.glb"></a-asset-item>
+      <a-asset-item id="modelo-3d" src="assets/Zombiee.glb"></a-asset-item>
+      <a-asset-item id="zombieW" src="assets/zombiewalk.glb"></a-asset-item>
+      <a-asset-item id="zombieR" src="assets/zombieR.glb"></a-asset-item>
+      <a-asset-item id="warrior" src="assets/warrior.glb"></a-asset-item>
       <a-assets-item id="hongo" src="assets/luz.png" class="hongo"></a-assets-item>
-      <a-assets-item id="camera" src="assets/camera2.png" ></a-assets-item>
+      <a-assets-item id="camera" src="assets/camera2.png"></a-assets-item>
     </a-assets>
 
     <a-sky color="#6EBAA7"></a-sky>
@@ -30,18 +31,25 @@
 
 
     <!-- Entorno -->
-     <a-entity gltf-model="#entorno" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-entity>
+    <a-entity gltf-model="#entorno" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-entity>
 
     <!--Camara jugador-->
     <a-entity camera look-controls wasd-controls position="0 1.6 0">
 
-      <a-text id="score-text" value="Honguitos:0" color="red" position="0 -0.3 -1" width="1" align="center"></a-text>
+      <a-text id="score-text" value="Score:0" color="red" position="0 -0.3 -1" width="2" align="center"></a-text>
       <a-entity cursor="fuse: true; fuseTimeout: 100" raycaster="objects: .clickable" position="0 0 -1"
-        geometry="primitive:plane; height: 2; width: 2.5" material= "shader: flat; src: #camera; transparent: true; alphaTest: 0.5 "></a-entity>
+        geometry="primitive:plane; height: 2; width: 2.5"
+        material="shader: flat; src: #camera; transparent: true; alphaTest: 0.5 "></a-entity>
     </a-entity>
 
-
   </a-scene>
+
+  <div id="fin-juego-mensaje" class="mensaje-oculto">
+    <p>¡Bien hecho! Has completado este nivel.</p>
+    <button id="next-level-button">Siguiente Nivel</button>
+  </div>
+
+
 </body>
 
 </html>
