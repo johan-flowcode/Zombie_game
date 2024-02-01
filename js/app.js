@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let score = 0
 
-  const numeroDehongos = 4
+  const numeroDehongos = 3
   for (let i = 0; i < numeroDehongos; i++) {
     ['hongo'].forEach(modelo => {
       let hongos = document.createElement('a-entity');
@@ -87,6 +87,12 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('next-level-button').addEventListener('click', function () {
     window.location.href = 'nivel.html';
   });
+
+  document.getElementById('start').addEventListener('click', function() {
+    document.getElementById('pantalla-inicio').style.display = 'none';
+    document.querySelector('a-scene').style.display = 'block';
+  });
+
 
 
 });
