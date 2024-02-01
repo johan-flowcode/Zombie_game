@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
       hongos.classList.add('clickable');
 
 
-      let x = Math.random() * 30 - 10; // Ajusta estos valores según tu escena
+      let x = Math.random() * 30 - 10; 
       let y = 0.7;
       let z = Math.random() * 30 - 20;
       hongos.setAttribute('position', `${x} ${y} ${z}`);
