@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
       hongos.classList.add('clickable');
 
 
-      let x = Math.random() * 30 - 10; 
+      let x = Math.random() * 30 - 10;
       let y = 0.7;
       let z = Math.random() * 30 - 20;
       hongos.setAttribute('position', `${x} ${y} ${z}`);
@@ -75,20 +75,20 @@ document.addEventListener('DOMContentLoaded', function () {
   function mostrarMensajeFinJuego() {
     console.log("Intentando mostrar el mensaje de fin de juego");
     const mensajeFinJuego = document.getElementById('fin-juego-mensaje');
-    mensajeFinJuego.style.display = 'block'; // Cambia a 'block' para mostrar
+    mensajeFinJuego.style.display = 'block'; 
   }
 
   // Función para ocultar el mensaje del juego
   function ocultarMensajeFinJuego() {
     const mensajeFinJuego = document.getElementById('fin-juego-mensaje');
-    mensajeFinJuego.style.display = 'none'; // Cambia a 'none' para ocultar
+    mensajeFinJuego.style.display = 'none'; 
   }
 
   document.getElementById('next-level-button').addEventListener('click', function () {
     window.location.href = 'nivel.html';
   });
 
-  document.getElementById('start').addEventListener('click', function() {
+  document.getElementById('start').addEventListener('click', function () {
     document.getElementById('pantalla-inicio').style.display = 'none';
     document.querySelector('a-scene').style.display = 'block';
   });
