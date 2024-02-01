@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let score = 0
 
-  const numeroDehongos = 3
+  const numeroDehongos = 8
   for (let i = 0; i < numeroDehongos; i++) {
     ['hongo'].forEach(modelo => {
       let hongos = document.createElement('a-entity');
